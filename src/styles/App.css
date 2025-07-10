@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* Adjust based on your navbar height */
+  padding-bottom: 40px; /* Space before footer */
+}
+
+.page {
+    height: 80vh;
+    margin-top: 60px;
+}
+
+
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 70px; 
+  }
+}
