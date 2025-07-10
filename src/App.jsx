@@ -5,6 +5,7 @@ import './styles/App.css'
  * Layout imports
  */
 import Navbar from './layout/navbar'
+import Footer from './layout/footer'
 
 /**
  * Pages imports
@@ -14,15 +15,23 @@ import Explore from './Pages/Explore'
 import Create from './Pages/Create'
 import MyCapsules from './Pages/MyCapsules'
 import TermsAndConditions from './Pages/TermsAndConditions'
+import Layout from './layout/Layout'
 
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-[100vh] justify-center w-full items-center">
-        <Navbar />
+      <div className="flex flex-col min-h-[100vh] justify-center w-full items-center bg-gray-100">
+        {/* <Navbar /> */}
         <main className="main-content ">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/"
+              element={
+                <Layout className='w-full layout'>
+                  <Home />
+                </Layout>
+              }
+            />
             <Route path="/explore" element={<Explore />} />
             <Route path="/create" element={<Create />} />
             <Route path="/my-capsules" element={<MyCapsules />} />
@@ -30,6 +39,7 @@ function App() {
 
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   )

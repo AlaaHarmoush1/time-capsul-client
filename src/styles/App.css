@@ -9,15 +9,20 @@
 
 
 .main-content {
-  flex: 1;
   padding-top: 80px; /* Adjust based on your navbar height */
   padding-bottom: 40px; /* Space before footer */
 }
 
 .page {
-    height: 80vh;
+    height: 100%;
     margin-top: 60px;
 }
+
+/* .layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+} */
 
 
 

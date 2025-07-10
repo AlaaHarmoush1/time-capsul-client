@@ -10,7 +10,7 @@ import {
 
 const Socialicons = () => {
   return (
-    <div className='flex flex-row gap-6 text-2xl text-white socialIcons cursor-pointer'>
+    <div className='flex flex-row gap-6 text-2xl text-primary socialIcons cursor-pointer'>
         <a href="https://www.facebook.com" target="_blank"><FaFacebook/></a>
         <a href="https://www.instagram.com" target="_blank"><FaInstagram/></a>
         <a href="https://www.x.com" target="_blank"><FaTwitter/></a>
