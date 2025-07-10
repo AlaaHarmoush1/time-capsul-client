@@ -1,69 +1,62 @@
 import React from 'react'
+import Card from '../component/reusable/TermsAndConditionsComponents/Card'
 
 const TermsAndConditions = () => {
-return (
-    <div className='page max-w-4xl mx-auto p-6 text-gray-800'>
-      <h1 className='text-3xl font-bold mb-6 text-primary'>Terms & Conditions</h1>
+  return (
+    <div className='page max-w-4xl mx-auto px-4 py-8 md:px-6 lg:px-8 text-gray-800'>
+      <div className='text-center mb-10'>
+        <h1 className='text-4xl font-bold mb-3 text-primary'>Terms & Conditions</h1>
+        <p className='text-gray-500'>Last updated: July 10, 2025</p>
+      </div>
 
-      <p className='mb-4'>Last updated: July 10, 2025</p>
+      <div className='flex flex-col items-center'>
+        <Card 
+          title="1. Acceptance of Terms"
+          text="By accessing or using TimeCapsul, you agree to be bound by these Terms and Conditions. If you do not agree with any part of the terms, you may not access the platform."
+        />
 
-      <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>1. Acceptance of Terms</h2>
-        <p>
-          By accessing or using <strong>TimeCapsul</strong>, you agree to be bound by these Terms and Conditions.
-          If you do not agree with any part of the terms, you may not access the platform.
-        </p>
-      </section>
+        <Card 
+          title="2. Eligibility"
+          text="TimeCapsul is available to users of all ages, including those under 18, with appropriate supervision where required by local law."
+        />
 
-      <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>2. Eligibility</h2>
-        <p>
-          TimeCapsul is available to users of all ages, including those under 18, with appropriate supervision where required by local law.
-        </p>
-      </section>
+        <Card 
+          title="3. Personal Data"
+          text="We collect personal information such as your name, email, location, and uploaded media. By using the app, you consent to this data being collected, stored, and processed in accordance with our privacy practices."
+        />
 
-      <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>3. Personal Data</h2>
-        <p>
-          We collect personal information such as your name, email, location, and uploaded media. By using the app, you consent to this data being collected, stored, and processed in accordance with our privacy practices.
-        </p>
-      </section>
+        <Card 
+          title="4. User Content"
+          text="You may upload content including text, images, and audio. All content you submit remains fully owned by you. TimeCapsul does not claim any rights over your data. However, your content may be visible to others based on your sharing settings."
+        />
 
-      <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>4. User Content</h2>
-        <p>
-          You may upload content including text, images, and audio. All content you submit remains fully owned by you. TimeCapsul does not claim any rights over your data.
-          However, your content may be visible to others based on your sharing settings.
-        </p>
-      </section>
+        <Card 
+          title="5. Prohibited Conduct"
+          text="Users may not post or share content that includes hate speech, harassment, illegal content, or any material that violates the rights of others or applicable laws."
+        />
 
-      <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>5. Prohibited Conduct</h2>
-        <p>
-          Users may not post or share content that includes hate speech, harassment, illegal content, or any material that violates the rights of others or applicable laws.
-        </p>
-      </section>
+        <Card 
+          title="6. Fees and Access"
+          text="TimeCapsul is free to use. We may offer optional premium features or subscriptions in the future, which will be clearly explained before any charges apply."
+        />
 
-      <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>6. Fees and Access</h2>
-        <p>
-          TimeCapsul is free to use. We may offer optional premium features or subscriptions in the future, which will be clearly explained before any charges apply.
-        </p>
-      </section>
+        <Card 
+          title="7. Governing Law"
+          text="These Terms shall be governed and construed in accordance with the laws of Lebanon, without regard to its conflict of law principles."
+        />
 
-      <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>7. Governing Law</h2>
-        <p>
-          These Terms shall be governed and construed in accordance with the laws of Lebanon, without regard to its conflict of law principles.
-        </p>
-      </section>
-
-      <section className='mb-6'>
-        <h2 className='text-xl font-semibold mb-2'>8. Contact</h2>
-        <p>
-          If you have any questions or concerns about these Terms, please contact us at: <a href='mailto:info@timecapsul-lb.com' className='text-primary underline'>info@timecapsul-lb.com</a>
-        </p>
-      </section>
+        <Card 
+          title="8. Contact"
+          text={
+            <>
+              If you have any questions or concerns about these Terms, please contact us at: 
+              <a href='mailto:info@timecapsul-lb.com' className='text-primary underline hover:text-primary-dark ml-1'>
+                info@timecapsul-lb.com
+              </a>
+            </>
+          }
+        />
+      </div>
     </div>
   )
 }

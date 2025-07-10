@@ -5,7 +5,6 @@ import './styles/App.css'
  * Layout imports
  */
 import Navbar from './layout/navbar'
-import Footer from './layout/footer'
 
 /**
  * Pages imports
@@ -19,7 +18,7 @@ import TermsAndConditions from './Pages/TermsAndConditions'
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-[100vh]">
+      <div className="flex flex-col min-h-[100vh] justify-center w-full items-center">
         <Navbar />
         <main className="main-content ">
           <Routes>
@@ -31,7 +30,6 @@ function App() {
 
           </Routes>
         </main>
-        <Footer />
       </div>
     </Router>
   )
