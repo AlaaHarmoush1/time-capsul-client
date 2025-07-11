@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import '../../../styles/utilities.css'
-import '../../../styles/Layouts/footer.css'
+import '../../../../styles/Layouts/footer.css'
 
 
 const NavLinks = (props) => {

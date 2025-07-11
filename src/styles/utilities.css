@@ -173,3 +173,10 @@
 .transition       { transition: all 0.3s ease; }
 .transition-fast  { transition: all 0.15s ease; }
 .transition-slow  { transition: all 0.5s ease; }
+
+
+/* Cursor */
+
+.cursor-pointer {
+  cursor: pointer;
+}

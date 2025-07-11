@@ -6,9 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 /**
  * Components imports
  */
-import Socialicons from "../../component/shared/LayoutComponents/SocialIcons";
+import Socialicons from "../shared/LayoutComponents/Footer/SocialIcons";
 import Logo from "../../assets/coded-images/Logo";
-import NavLinks from "../../component/shared/LayoutComponents/NavLinks";
+import NavLinks from "../../component/shared/LayoutComponents/Footer/NavLinks";
 import CapyRights from "./CapyRights";
 
 /**
@@ -19,7 +19,6 @@ import { sendSubscriptionEmail } from "../../Services/emailService";
 /**
  * CSS Imports
  */
-import "../../styles/utilities.css";
 import "../../styles/Layouts/footer.css";
 
 const Footer = () => {

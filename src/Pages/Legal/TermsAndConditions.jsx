@@ -1,7 +1,5 @@
 import React from 'react'
 import TermsCard from '../../component/pages/legal/TermsAndConditions/TermsCard.jsx'
-import '../../styles/utilities.css'
-
 import termsData from '../../data/Legal/termsAndConditions.jsx'
 
 const TermsAndConditions = () => {

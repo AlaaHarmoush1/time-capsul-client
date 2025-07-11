@@ -1,4 +1,3 @@
-import '../../../../styles/utilities.css'
 
 const TermsCard = (props) => {
   return (

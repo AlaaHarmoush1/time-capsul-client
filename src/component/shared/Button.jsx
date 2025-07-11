@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../styles/utilities.css'
 
 const Button = (props) => {
   return (

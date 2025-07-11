@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles/App.css'
-import './styles/utilities.css'
 
 /**
  * Layout imports

@@ -1,6 +1,4 @@
 import React from 'react'
-import '../../../styles/utilities.css'
-
 import {
   FaGithub,
   FaTwitter,
