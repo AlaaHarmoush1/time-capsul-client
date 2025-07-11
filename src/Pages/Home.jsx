@@ -1,10 +1,10 @@
 import React from 'react'
-import '../styles/pages/Home.css'
+import '../styles/utilities.css'
 
 
 const Home = () => {
   return (
-    <div className='page'>
+    <div className='h-full mt-2xl'>
       hello
     </div>
   )

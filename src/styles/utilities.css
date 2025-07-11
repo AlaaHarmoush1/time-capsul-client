@@ -98,6 +98,17 @@
 .m-5xl  { margin: 3rem;    }
 
 
+.mt-xs   { margin-top: 0.75rem; }
+.mt-sm   { margin-top: 0.90rem; }
+.mt-base { margin-top: 1rem;    }
+.mt-lg   { margin-top: 1.125rem;}
+.mt-xl   { margin-top: 1.25rem; }
+.mt-2xl  { margin-top: 1.5rem;  }
+.mt-3xl  { margin-top: 1.857rem;}
+.mt-4xl  { margin-top: 2.25rem; }
+.mt-5xl  { margin-top: 3rem;    }
+
+
 /*  Flex Utilities  */
 .flex            { display: flex; }
 .flex-row        { flex-direction: row; }
@@ -139,6 +150,7 @@
 /*  Shadow Utilities  */
 .shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
 
+
 .shadow-md {
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -149,6 +161,11 @@
   box-shadow:
     0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+
+.text-shadow-custome {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 

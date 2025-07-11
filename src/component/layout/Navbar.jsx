@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/utilities.css';
-import '../styles/Layouts/navbar.css';
+import '../../styles/utilities.css';
+import '../../styles/Layouts/navbar.css';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 /**
  * importing components
  */
 
-import Button from '../component/shared/Button';
-import Logo from "../assets/coded-images/Logo";
+import Button from '../../component/shared/Button';
+import Logo from "../../assets/coded-images/Logo";
 
 
 
