@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../component/reusable/TermsAndConditionsComponents/Card'
+import Card from '../../component/reusable/TermsAndConditionsComponents/Card'
 
 const TermsAndConditions = () => {
   return (

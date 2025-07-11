@@ -1,6 +1,6 @@
 import React from 'react'
-import '../../styles/utilities.css'
-import '../../styles/components-styles/socialIcons.css'
+import '../../../styles/utilities.css'
+import '../../../styles/components-styles/socialIcons.css'
 import {
   FaGithub,
   FaTwitter,

@@ -8,10 +8,10 @@ import "../styles/utilities.css";
 const Layout = ({ children }) => {
   return (
     <>
-    <div className="min-h-screen flex flex-col w-full bg-red-400">
+    <div className="min-h-screen flex flex-col w-full items-center ">
         <Navbar />
             <main className="">{children}</main>
-        <Footer className=""/>
+        <Footer className="bottom-0 left-0 right-0 "/>
     </div>
     </>
   )

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles/App.css'
+import './styles/utilities.css'
 
 /**
  * Layout imports
@@ -14,32 +15,28 @@ import Home from './Pages/Home'
 import Explore from './Pages/Explore'
 import Create from './Pages/Create'
 import MyCapsules from './Pages/MyCapsules'
-import TermsAndConditions from './Pages/TermsAndConditions'
-import Layout from './layout/Layout'
+import TermsAndConditions from './Pages/Legal/TermsAndConditions'
+import NotFound from './Pages/NotFound'
 
-function App() {
+
+// import Layout from './layout/Layout' will be removed if not used later
+
+const App = () => {
   return (
     <Router>
-      <div className="flex flex-col min-h-[100vh] justify-center w-full items-center bg-gray-100">
-        {/* <Navbar /> */}
+      <div className="flex flex-col min-h-[100vh] justify-center w-full  bg-gray-100">
+        <Navbar />
         <main className="main-content ">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Layout className='w-full layout'>
-                  <Home />
-                </Layout>
-              }
-            />
+            <Route path="/" element={ <Home /> } />
             <Route path="/explore" element={<Explore />} />
             <Route path="/create" element={<Create />} />
             <Route path="/my-capsules" element={<MyCapsules />} />
             <Route path="/Terms-and-conditions" element={<TermsAndConditions />} />
-
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-        <Footer />
+        <Footer /> 
       </div>
     </Router>
   )
