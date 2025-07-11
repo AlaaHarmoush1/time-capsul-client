@@ -1,9 +1,10 @@
-import React from 'react'
+import { Children } from 'react'
 
 const Button = (props) => {
   return (
-    <button className={props.style}>
+    <button onClick={props.function}>
         {props.text}
+        {Children}
     </button>
   )
 }

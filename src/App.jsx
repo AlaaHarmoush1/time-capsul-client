@@ -13,8 +13,6 @@ import Footer from './component/layout/Footer.jsx'
 import { routes } from './routes.jsx'
 
 
-// TODO: USE Layout Not Direclty Navbar and Footer
-
 const App = () => {
   return (
     <Router>

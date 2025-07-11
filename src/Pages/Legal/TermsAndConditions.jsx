@@ -1,5 +1,4 @@
-import React from 'react'
-import TermsCard from '../../component/pages/legal/TermsAndConditions/TermsCard.jsx'
+import InfoCard from '../../component/shared/QuickLinks/InfoCard.jsx'
 import termsData from '../../data/Legal/termsAndConditions.jsx'
 
 const TermsAndConditions = () => {
@@ -12,7 +11,7 @@ const TermsAndConditions = () => {
 
       <div className='flex flex-col items-center sm:w-[75%]'>
         {termsData.map((term, index) => (
-          <TermsCard key={index} title={term.title} text={term.text} />
+          <InfoCard key={index} title={term.title} text={term.text} />
         ))}
       </div>
     </div>

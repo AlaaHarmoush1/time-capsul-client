@@ -1,5 +1,4 @@
-
-const TermsCard = (props) => {
+const InfoCard = (props) => {
   return (
     <div className="bg-white rounded-lg shadow-md p-base mb-6 transition-all duration-300 hover:shadow-lg m-lg w-50">
       <h1 className="text-2xl font-bold text-gray-800 mb-3">{props.title}</h1>
@@ -14,4 +13,4 @@ const TermsCard = (props) => {
   )
 }
 
-export default TermsCard
+export default InfoCard
