@@ -1,0 +1,55 @@
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+}
+
+.logo-text {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.logo-text:hover {
+    transform: scale(1.02);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.input {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    border-color: #6E8EFB;
+    outline: none;
+}
+
+.useful-links a {
+    transition: color 0.3s ease;
+}
+
+.hover-text-primary:hover {
+    color: #6E8EFB;
+}
+
+.hover-bg-blue-700:hover {
+    background-color: #5a6ec5;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem !important;
+    }
+    
+    .useful-links {
+        align-items: center;
+    }
+    
+    .subscribtion-section {
+        width: 100%;
+    }
+}

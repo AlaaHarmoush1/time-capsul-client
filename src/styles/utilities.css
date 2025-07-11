@@ -1,13 +1,13 @@
 /*  Background Colors  */
 .bg-gradient     { background: linear-gradient(135deg, #6528E0 0%, #2829E1 100%); }
 .bg-white        { background-color: white;  }
-.bg-primary      { background-color: #6528E0;}
+.bg-primary      { background-color: #6E8EFB;}
 .bg-transparent  { background-color: transparent; }
 
 
 /*  Text Colors  */
 .text-white   { color: white;   }
-.text-primary { color: #6528E0; }
+.text-primary { color: #6E8EFB; }
 
 
 /*  Font Sizes  */
@@ -59,6 +59,9 @@
 .h-auto { height: auto; }
 
 
+.min-h-screen { min-height: 100vh;}
+
+
 /*  Padding Utilities  */
 .p-xs   { padding: 0.75rem; }
 .p-sm   { padding: 0.90rem; }
@@ -69,6 +72,18 @@
 .p-3xl  { padding: 1.857rem;}
 .p-4xl  { padding: 2.25rem; }
 .p-5xl  { padding: 3rem;    }
+
+.pt-xs   { padding-top: 0.75rem; }
+.pt-sm   { padding-top: 0.90rem; }
+.pt-base { padding-top: 1rem;    }
+.pt-lg   { padding-top: 1.125rem;}
+.pt-xl   { padding-top: 1.25rem; }
+.pt-2xl  { padding-top: 1.5rem;  }
+.pt-3xl  { padding-top: 1.857rem;}
+.pt-4xl  { padding-top: 2.25rem; }
+.pt-5xl  { padding-top: 3rem;    }
+.pt-c    { padding-top: 80px;    }
+
 
 
 /*  Margin Utilities  */
@@ -92,6 +107,7 @@
 .justify-between { justify-content: space-between; }
 .align-center    { align-items: center; }
 .gap-4           { gap: 1rem; }
+.items-center    { align-items: center;}
 
 
 /*  Position Utilities  */
@@ -104,7 +120,11 @@
 
 .top-0    { top: 0;   }
 
-.buttom   { bottom: 0;}
+.bottom-0 { bottom: 0;}
+
+.left-0   {left: 0;   }
+
+.right-0  {right: 0;  }
 
 
 /*  Border Utilities  */

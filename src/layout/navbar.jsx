@@ -24,19 +24,25 @@ const Navbar = () => {
   
 
   return (
-    <nav className='navbar shadow-md p-4xl transition-slow h-auto w-full bg-gradient flex flex-row flex-wrap justify-between align-center px-6 py-3 fixed'>
+    <nav className='navbar shadow-md p-4xl transition-slow h-auto w-full bg-white flex flex-row flex-wrap justify-between align-center px-6 py-3 fixed'>
       <div className='logo-container'>
         <Logo/>
       </div>
       
       <div className='nav-links flex flex-row gap-2'>
-        <Link to="/"><button className='nav-link bg-transparent'>Home</button></Link>
-        <Link to="/My Capsules"><button className='nav-link bg-transparent'>My Capsules</button></Link>
-        <Link to="/Public-wall"><button className='nav-link bg-transparent'>Public Wall</button></Link>
+        <Link to="/"><button className='nav-link bg-transparent text-primary text-600'>Home</button></Link>
+        <Link to="/My Capsules"><button className='nav-link bg-transparent text-primary text-600'>My Capsules</button></Link>
+        <Link to="/Public-wall"><button className='nav-link bg-transparent text-primary text-600'>Public Wall</button></Link>
         {!isLoggedIn && (
           <Button 
             text="Login" 
-            style="button text-purple border-none bg-white h-50 px-6 p-xs text-bold rounded-lg hover-scale transition"
+            style="button text-white border-none bg-white h-50 px-6 p-xs text-base font-bold rounded-lg hover-scale transition bg-primary"
+          />
+        )},
+        {isLoggedIn && (
+          <Button
+          text="Profile"
+          style="button text-white border-none bg-white h-50 px-6 p-xs text-base font-bold rounded-lg hover-scale transition bg-primary"
           />
         )}
       </div>
@@ -49,14 +55,23 @@ const Navbar = () => {
       </button>
       
       {mobileMenuOpen && (
-        <div className='mobile-menu active flex flex-col align-center'>
-          <Link to="/"><button className='nav-link w-full text-center bg-transparent'>Home</button></Link>
-          <Link to="/my-capsules"><button className='nav-link w-full text-center bg-transparent'>My Capsules</button></Link>
-          <Link to="/Public-wall"><button className='nav-link w-full text-center bg-transparent'>Public Wall</button></Link>
+        <div className='mobile-menu active flex flex-col align-center text-primary bg-white'>
+          <Link to="/"><button className='nav-link w-full text-center bg-transparent text-primary'>Home</button></Link>
+          <Link to="/my-capsules"><button className='nav-link w-full text-center bg-transparent text-primary'>My Capsules</button></Link>
+          <Link to="/Public-wall"><button className='nav-link w-full text-center bg-transparent text-primary'>Public Wall</button></Link>
+          {!isLoggedIn && (
           <Button 
             text="Login" 
-            style="button text-purple border-none bg-primary w-full py-3 text-bold rounded-lg hover-scale transition"
+            style="utton text-white border-none bg-primary w-25 py-3 text-bold rounded-lg hover-scale transition"
           />
+        )},
+        
+        {isLoggedIn && (
+          <Button
+          text="Profile"
+          style="utton text-white border-none bg-primary w-25 py-3 text-bold rounded-lg hover-scale transition"
+          />
+        )}
         </div>
       )}
     </nav>

@@ -1,37 +1,34 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles/App.css'
+import './styles/utilities.css'
 
 /**
  * Layout imports
  */
-import Navbar from './layout/navbar'
-import Footer from './layout/footer'
+import Navbar from './layout/Navbar.jsx'
+import Footer from './layout/Footer.jsx'
 
 /**
  * Pages imports
  */
-import Home from './Pages/Home'
-import Explore from './Pages/Explore'
-import Create from './Pages/Create'
-import MyCapsules from './Pages/MyCapsules'
-import TermsAndConditions from './Pages/TermsAndConditions'
+import { routes } from './routes.jsx'
 
-function App() {
+
+// TODO: USE Layout Not Direclty Navbar and Footer
+
+const App = () => {
   return (
     <Router>
-      <div className="flex flex-col min-h-[100vh]">
+      <div className="flex flex-col min-h-screen w-full bg-gray-100">
         <Navbar />
-        <main className="main-content ">
+        <main className="pt-c">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/explore" element={<Explore />} />
-            <Route path="/create" element={<Create />} />
-            <Route path="/my-capsules" element={<MyCapsules />} />
-            <Route path="/Terms-and-conditions" element={<TermsAndConditions />} />
-
+            {routes.map(route => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
           </Routes>
         </main>
-        <Footer />
+        <Footer /> 
       </div>
     </Router>
   )

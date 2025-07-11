@@ -9,20 +9,28 @@
 
 
 .main-content {
-  flex: 1;
   padding-top: 80px; /* Adjust based on your navbar height */
-  padding-bottom: 40px; /* Space before footer */
+/* Space before footer */
 }
 
 .page {
-    height: 80vh;
+    height: 100%;
     margin-top: 60px;
+
 }
+
+.TAC {
+  width: 100%;
+} 
 
 
 
 @media (max-width: 768px) {
   .main-content {
     padding-top: 70px; 
+  }
+
+  .page {
+    margin-top: 0px;
   }
 }
