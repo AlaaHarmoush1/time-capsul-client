@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @tailwind utilities;
+@import './utilities.css';
 
 main {
     flex-grow: 1;

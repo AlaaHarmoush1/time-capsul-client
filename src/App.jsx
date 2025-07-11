@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles/App.css'
-import './styles/utilities.css'
 
 /**
  * Layout imports
  */
-import Navbar from './layout/Navbar.jsx'
-import Footer from './layout/Footer.jsx'
+import Navbar from './component/layout/Navbar.jsx'
+import Footer from './component/layout/Footer.jsx'
 
 /**
  * Pages imports

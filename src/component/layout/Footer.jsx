@@ -6,21 +6,20 @@ import 'react-toastify/dist/ReactToastify.css';
 /**
  * Components imports
  */
-import Socialicons from "../component/reusable/LayoutComponents/SocialIcons";
-import Logo from "../assets/coded-images/Logo";
-import NavLinks from "../component/reusable/LayoutComponents/NavLinks";
+import Socialicons from "../shared/LayoutComponents/Footer/SocialIcons";
+import Logo from "../../assets/coded-images/Logo";
+import NavLinks from "../../component/shared/LayoutComponents/Footer/NavLinks";
 import CapyRights from "./CapyRights";
 
 /**
  * Services Imports
  */
-import { sendSubscriptionEmail } from "../Services/emailService";
+import { sendSubscriptionEmail } from "../../Services/emailService";
 
 /**
  * CSS Imports
  */
-import "../styles/utilities.css";
-import "../styles/Layouts/footer.css";
+import "../../styles/Layouts/footer.css";
 
 const Footer = () => {
   const formRef = useRef(null);
@@ -59,7 +58,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="p-4xl transition-slow h-auto w-full bg-white flex flex-row flex-wrap justify-between align-center px-6 py-3 gap-4 bottom-0 right-0 left-0">
+      <footer className="p-4xl transition-slow h-auto w-full bg-white flex flex-row flex-wrap justify-between align-center px-6 py-3 gap-4 bottom-0 right-0 left-0 mt-lg">
         {/* Logo and Social Icons */}
         <div className="flex flex-col justify-between">
           <div className="logo-container">

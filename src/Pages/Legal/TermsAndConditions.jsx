@@ -1,8 +1,6 @@
 import React from 'react'
-import Card from '../../component/reusable/PagesComponents/Legal/TermsAndConditionsComponents/Card'
-import '../../styles/utilities.css'
-
-import termsData from '../../data/termsAndConditions.jsx'
+import TermsCard from '../../component/pages/legal/TermsAndConditions/TermsCard.jsx'
+import termsData from '../../data/Legal/termsAndConditions.jsx'
 
 const TermsAndConditions = () => {
   return (
@@ -14,7 +12,7 @@ const TermsAndConditions = () => {
 
       <div className='flex flex-col items-center sm:w-[75%]'>
         {termsData.map((term, index) => (
-          <Card key={index} title={term.title} text={term.text} />
+          <TermsCard key={index} title={term.title} text={term.text} />
         ))}
       </div>
     </div>
