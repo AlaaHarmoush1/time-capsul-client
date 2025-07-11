@@ -5,35 +5,27 @@ import './styles/utilities.css'
 /**
  * Layout imports
  */
-import Navbar from './layout/navbar'
-import Footer from './layout/footer'
+import Navbar from './layout/Navbar.jsx'
+import Footer from './layout/Footer.jsx'
 
 /**
  * Pages imports
  */
-import Home from './Pages/Home'
-import Explore from './Pages/Explore'
-import Create from './Pages/Create'
-import MyCapsules from './Pages/MyCapsules'
-import TermsAndConditions from './Pages/Legal/TermsAndConditions'
-import NotFound from './Pages/NotFound'
+import { routes } from './routes.jsx'
 
 
-// import Layout from './layout/Layout' will be removed if not used later
+// TODO: USE Layout Not Direclty Navbar and Footer
 
 const App = () => {
   return (
     <Router>
-      <div className="flex flex-col min-h-[100vh] justify-center w-full  bg-gray-100">
+      <div className="flex flex-col min-h-screen w-full bg-gray-100">
         <Navbar />
-        <main className="main-content ">
+        <main className="pt-c">
           <Routes>
-            <Route path="/" element={ <Home /> } />
-            <Route path="/explore" element={<Explore />} />
-            <Route path="/create" element={<Create />} />
-            <Route path="/my-capsules" element={<MyCapsules />} />
-            <Route path="/Terms-and-conditions" element={<TermsAndConditions />} />
-            <Route path="*" element={<NotFound />} />
+            {routes.map(route => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
           </Routes>
         </main>
         <Footer /> 

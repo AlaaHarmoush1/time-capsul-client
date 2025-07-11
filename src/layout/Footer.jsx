@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useRef } from "react";
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 /**
  * Components imports
@@ -13,35 +14,46 @@ import CapyRights from "./CapyRights";
 /**
  * Services Imports
  */
-
-import { sendSubscriptionEmail } from "../Services/emailService.js";
-
+import { sendSubscriptionEmail } from "../Services/emailService";
 
 /**
- * Css Imports
+ * CSS Imports
  */
 import "../styles/utilities.css";
 import "../styles/Layouts/footer.css";
 
-
 const Footer = () => {
-  const formRef = useRef();
+  const formRef = useRef(null);
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
-    if (!email) return;
+    
+    if (!email) {
+      toast.error("Please enter your email");
+      return;
+    }
 
-    const response = await sendSubscriptionEmail(email);
-    setIsSubscribed(true);
+    setIsLoading(true);
 
-    if (response.success) {
-      setIsSubscribed(true);
-      setEmail("");
-      formRef.current.reset();
-    } else {
-      toast.error("Something went wrong. Try again later.")
+    try {
+      const response = await sendSubscriptionEmail(email);
+      
+      if (response.success) {
+        setIsSubscribed(true);
+        setEmail("");
+        if (formRef.current) formRef.current.reset();
+        toast.success("Subscription successful!");
+      } else {
+        toast.error(response.message || "Subscription failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Subscription error:", error);
+      toast.error("An unexpected error occurred. Please try again later.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -57,14 +69,13 @@ const Footer = () => {
         </div>
 
         {/* Useful Links */}
-
         <NavLinks
           title="Legal"
-          path1="/Terms-and-conditions"
+          path1="/terms"
           Link1="Terms & Conditions"
-          path2="/Privacy-Policy"
+          path2="/privacy"
           Link2="Privacy Policy"
-          path3="/Legal-Notice"
+          path3="/legal"
           Link3="Legal Notice"
         />
 
@@ -72,19 +83,19 @@ const Footer = () => {
           title="Quick Links"
           path1="/about"
           Link1="About Us"
-          path2="/Careers"
+          path2="/careers"
           Link2="Careers"
-          path3="/News"
+          path3="/news"
           Link3="News"
         />
 
         <NavLinks
           title="Support"
-          path1="/FAQ"
+          path1="/faq"
           Link1="FAQ"
-          path2="/Contact-Us"
+          path2="/contact"
           Link2="Contact Us"
-          path3="/Report"
+          path3="/report"
           Link3="Report a Problem"
         />
 
@@ -107,21 +118,32 @@ const Footer = () => {
                 name="user_email"
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="bg-white h-9 rounded-lg input border-none w-full px-3"
+                className="bg-white h-9 rounded-lg input border-none w-full p-xs"
                 required
+                disabled={isLoading}
               />
               <button
                 type="submit"
-                className="bg-primary text-white rounded-lg py-2 px-4 hover-bg-blue-700 transition-fast"
+                className="bg-primary text-white rounded-lg py-2 px-4 hover:bg-blue-700 transition-fast disabled:opacity-50"
+                disabled={isLoading}
               >
-                Subscribe
+                {isLoading ? "Subscribing..." : "Subscribe"}
               </button>
             </form>
           )}
         </div>
       </footer>
       <CapyRights />
-      <ToastContainer />
+      <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 };

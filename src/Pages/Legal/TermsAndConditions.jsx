@@ -1,9 +1,10 @@
 import React from 'react'
-import Card from '../../component/reusable/TermsAndConditionsComponents/Card'
+import Card from '../../component/reusable/PagesComponents/Legal/TermsAndConditionsComponents/Card'
+import '../../styles/utilities.css'
 
 const TermsAndConditions = () => {
   return (
-    <div className='page max-w-4xl mx-auto px-4 py-8 md:px-6 lg:px-8 text-gray-800'>
+    <div className='page h-[100vh] flex flex-col items-center justify-center TAC max-w-4xl mx-auto w-full bg-red-500 px-4 py-8 md:px-6 lg:px-8 text-gray-800'>
       <div className='text-center mb-10'>
         <h1 className='text-4xl font-bold mb-3 text-primary'>Terms & Conditions</h1>
         <p className='text-gray-500'>Last updated: July 10, 2025</p>
