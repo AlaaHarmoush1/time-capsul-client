@@ -26,6 +26,13 @@ import News from './Pages/QuickLinks.jsx/News.jsx'
  */
 import ContactUs from './Pages/Support/ContactUs.jsx'
 import FAQ from './Pages/Support/FAQ.jsx'
+import Report from './Pages/Support/Report.jsx'
+
+
+/**
+ * Auth
+ */
+import Login from './Pages/Auth/Login.jsx'
 
 
 /**
@@ -46,5 +53,7 @@ export const routes = [
     { path: '/about', element: <About /> },
     { path: '/news', element: <News /> },
     { path: '/faq', element: <FAQ /> },
+    { path: '/report', element: <Report /> },
+    { path: '/login', element: <Login /> },
     { path: '*', element: <NotFound /> },
 ]

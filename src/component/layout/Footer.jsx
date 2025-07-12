@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Toast from "../../Services/AppToaster";
+import { toast } from 'react-toastify';
 
 /**
  * Components imports
@@ -18,9 +18,15 @@ import { sendSubscriptionEmail } from "../../Services/emailService";
 const Footer = () => {
   const formRef = useRef(null);
   const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+
+  const isSubscribed = localStorage.getItem('isSubscribed') == 'true';
+
+
+  /**
+   * TO DO CHANGE THIs function to another file
+   */
   const handleSubscribe = async (e) => {
     e.preventDefault();
     
@@ -35,10 +41,10 @@ const Footer = () => {
       const response = await sendSubscriptionEmail(email);
       
       if (response.success) {
-        setIsSubscribed(true);
         setEmail("");
         if (formRef.current) formRef.current.reset();
         toast.success("Subscription successful!");
+        localStorage.setItem('isSubscribed', true)
       } else {
         toast.error(response.message || "Subscription failed. Please try again.");
       }
@@ -93,7 +99,7 @@ const Footer = () => {
       </footer>
 
       <CapyRights />
-      <ToastContainer 
+      {/* <ToastContainer 
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
@@ -102,7 +108,7 @@ const Footer = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+      /> */}
     </>
   );
 };

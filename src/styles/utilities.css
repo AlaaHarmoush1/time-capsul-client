@@ -2,6 +2,9 @@
 .bg-gradient     { background: linear-gradient(135deg, #6528E0 0%, #2829E1 100%); }
 .bg-white        { background-color: white;  }
 .bg-primary      { background-color: #6E8EFB;}
+.bg-primary-sm   { background-color: #202a4d;}
+.bg-primary-lg   { background-color: #465ca3;}
+.bg-primary-2lg  { background-color: #5772cb;}
 .bg-transparent  { background-color: transparent; }
 
 
@@ -107,6 +110,17 @@
 .mt-3xl  { margin-top: 1.857rem;}
 .mt-4xl  { margin-top: 2.25rem; }
 .mt-5xl  { margin-top: 3rem;    }
+
+
+.ml-xs   { margin-left: 0.75rem; }
+.ml-sm   { margin-left: 0.90rem; }
+.ml-base { margin-left: 1rem;    }
+.ml-lg   { margin-left: 1.125rem;}
+.ml-xl   { margin-left: 1.25rem; }
+.ml-2xl  { margin-left: 1.5rem;  }
+.ml-3xl  { margin-left: 1.857rem;}
+.ml-4xl  { margin-left: 2.25rem; }
+.ml-5xl  { margin-left: 3rem;    }
 
 
 /*  Flex Utilities  */
