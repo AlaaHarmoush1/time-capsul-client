@@ -24,6 +24,7 @@
 
 
 
+
 @media (max-width: 768px) {
   .main-content {
     padding-top: 70px; 
@@ -36,4 +37,9 @@
   .sm-hidden {
     display: none;
   }
+
+  .sd-h-max {
+  height: 100vh;
+}
+
 }

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 const AuthButton = (props) => {
   const [menu, setMenu] = useState(false)
-  const isLoggedIn = true
+  const isLoggedIn = localStorage.getItem('isLoggedIn') == 'true'
 
   const handleMenu = () => {
     setMenu((prev) => !prev)

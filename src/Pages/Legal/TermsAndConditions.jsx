@@ -5,7 +5,7 @@ import PageHeader from '../../component/shared/QuickLinks/PageHeader.jsx'
 const TermsAndConditions = () => {
   return (
     <div className='page min-h-screen flex flex-col items-center justify-center TAC  w-full transparent text-gray-800'>
-      <PageHeader title="Terms & Conditions" Updatedate="July 10, 2025" />
+      <PageHeader title="Terms & Conditions" />
       <InfoCardList items={termsData}/>
     </div>
   )

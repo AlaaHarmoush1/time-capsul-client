@@ -7,7 +7,6 @@ import { FiMenu, FiX } from "react-icons/fi";
 import DesktopMenu from "../shared/LayoutComponents/Navbar/DesktopMenu";
 import MobileMenu from "../shared/LayoutComponents/Navbar/MobileMenu";
 
-
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 

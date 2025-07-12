@@ -8,7 +8,7 @@ const LegalNotice = () => {
 
   return (
     <div className='page min-h-screen flex flex-col items-center justify-center TAC  w-full transparent text-gray-800'>
-      <PageHeader title='Legal Notice' Updatedate="July 10, 2025"/>
+      <PageHeader title='Legal Notice'/>
       <InfoCardList items={legalNoticeData}/>
     </div>
   )

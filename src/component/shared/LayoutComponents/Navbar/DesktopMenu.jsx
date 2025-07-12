@@ -8,9 +8,7 @@ const DesktopMenu = () => {
         <LogoContainer />
         <NavLinks />
         <AuthButton device={"desktop"}/>
-
-
-
+        
     </>
   )
 }
