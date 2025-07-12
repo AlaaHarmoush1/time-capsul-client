@@ -14,10 +14,6 @@ import UsefullLinks from "../shared/LayoutComponents/Footer/UsefullLinks";
  */
 import { sendSubscriptionEmail } from "../../Services/emailService";
 
-/**
- * CSS Imports
- */
-import "../../styles/Layouts/footer.css";
 
 const Footer = () => {
   const formRef = useRef(null);

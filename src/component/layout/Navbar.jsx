@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../../styles/Layouts/navbar.css";
 import { FiMenu, FiX } from "react-icons/fi";
 
 /**

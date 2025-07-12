@@ -1,19 +1,12 @@
-import InfoCard from '../../component/shared/QuickLinks/InfoCard.jsx'
 import termsData from '../../data/Legal/termsAndConditions.jsx'
+import InfoCardList from '../../component/shared/QuickLinks/InfoCardList.jsx'
+import PageHeader from '../../component/shared/QuickLinks/PageHeader.jsx'
 
 const TermsAndConditions = () => {
   return (
-    <div className='page min-h-screen flex flex-col items-center justify-center TAC  w-full transparent px-4 py-8 md:px-6 lg:px-8 text-gray-800'>
-      <div className='text-center mb-10'>
-        <h1 className='text-4xl font-bold mb-3 text-primary'>Terms & Conditions</h1>
-        <p className='text-gray-500'>Last updated: July 10, 2025</p>
-      </div>
-
-      <div className='flex flex-col items-center sm:w-[75%]'>
-        {termsData.map((term, index) => (
-          <InfoCard key={index} title={term.title} text={term.text} />
-        ))}
-      </div>
+    <div className='page min-h-screen flex flex-col items-center justify-center TAC  w-full transparent text-gray-800'>
+      <PageHeader title="Terms & Conditions" Updatedate="July 10, 2025" />
+      <InfoCardList items={termsData}/>
     </div>
   )
 }
