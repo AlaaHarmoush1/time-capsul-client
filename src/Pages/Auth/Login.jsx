@@ -1,9 +1,10 @@
-import Form from '../../component/shared/Auth/From.jsx'
+import Form from '../../component/shared/Auth/Form.jsx'
+import GreetingImage from '../../component/shared/Auth/GreetingImage.jsx'
 
 const Login = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center align-center top-0 bg-primary">
-      <Form />
+    <div className="w-full min-h-screen flex justify-center items-center text-center">
+      <Form page="login"/>
     </div>
   )
 }

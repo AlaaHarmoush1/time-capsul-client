@@ -9,7 +9,7 @@ import { routes } from '../../routes'
 const AppWrapper = () => {
   const location = useLocation()
 
-  const authRoutes = ['/login', '/signup']
+  const authRoutes = ['/login', '/Login', '/signup','/Signup','/forgot-password', '/reset-password', '/*']
   const isAuthRoute = authRoutes.includes(location.pathname)
 
   return (

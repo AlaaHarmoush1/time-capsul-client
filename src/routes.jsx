@@ -33,6 +33,7 @@ import Report from './Pages/Support/Report.jsx'
  * Auth
  */
 import Login from './Pages/Auth/Login.jsx'
+import Signup from './Pages/Auth/Signup.jsx'
 
 
 /**
@@ -47,13 +48,14 @@ export const routes = [
     { path: '/public-wall', element: <PublicWall /> },
     { path: '/my-capsules', element: <MyCapsules /> },
     { path: '/terms', element: <TermsAndConditions /> },
-    { path: '/contact', element: <ContactUs /> },
     { path: '/privacy', element: <PrivacyPolicy /> },
     { path: '/legal', element: <LegalNotice /> },
     { path: '/about', element: <About /> },
     { path: '/news', element: <News /> },
+    { path: '/contact', element: <ContactUs /> },
     { path: '/faq', element: <FAQ /> },
     { path: '/report', element: <Report /> },
     { path: '/login', element: <Login /> },
+    { path: '/signup', element: <Signup /> },
     { path: '*', element: <NotFound /> },
 ]
