@@ -1,32 +1,32 @@
-import { Link } from "react-router-dom";
 import { useState, useRef } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Toast from "../../Services/AppToaster";
+import { toast } from 'react-toastify';
 
 /**
  * Components imports
  */
-import Socialicons from "../shared/LayoutComponents/Footer/SocialIcons";
-import Logo from "../../assets/coded-images/Logo";
-import NavLinks from "../../component/shared/LayoutComponents/Footer/NavLinks";
 import CapyRights from "./CapyRights";
+import LogoContainer from "../shared/LayoutComponents/logoContainer";
+import UsefullLinks from "../shared/LayoutComponents/Footer/UsefullLinks";
 
 /**
  * Services Imports
  */
 import { sendSubscriptionEmail } from "../../Services/emailService";
 
-/**
- * CSS Imports
- */
-import "../../styles/Layouts/footer.css";
 
 const Footer = () => {
   const formRef = useRef(null);
   const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+
+  const isSubscribed = localStorage.getItem('isSubscribed') == 'true';
+
+
+  /**
+   * TO DO CHANGE THIs function to another file
+   */
   const handleSubscribe = async (e) => {
     e.preventDefault();
     
@@ -41,10 +41,10 @@ const Footer = () => {
       const response = await sendSubscriptionEmail(email);
       
       if (response.success) {
-        setIsSubscribed(true);
         setEmail("");
         if (formRef.current) formRef.current.reset();
         toast.success("Subscription successful!");
+        localStorage.setItem('isSubscribed', true)
       } else {
         toast.error(response.message || "Subscription failed. Please try again.");
       }
@@ -59,46 +59,10 @@ const Footer = () => {
   return (
     <>
       <footer className="p-4xl transition-slow h-auto w-full bg-white flex flex-row flex-wrap justify-between align-center px-6 py-3 gap-4 bottom-0 right-0 left-0 mt-lg">
-        {/* Logo and Social Icons */}
-        <div className="flex flex-col justify-between">
-          <div className="logo-container">
-            <Logo />
-            <Socialicons />
-          </div>
-        </div>
 
-        {/* Useful Links */}
-        <NavLinks
-          title="Legal"
-          path1="/terms"
-          Link1="Terms & Conditions"
-          path2="/privacy"
-          Link2="Privacy Policy"
-          path3="/legal"
-          Link3="Legal Notice"
-        />
+        <LogoContainer Layout='Footer' className="flex flex-col justify-between"/>
+        <UsefullLinks/>
 
-        <NavLinks
-          title="Quick Links"
-          path1="/about"
-          Link1="About Us"
-          path2="/careers"
-          Link2="Careers"
-          path3="/news"
-          Link3="News"
-        />
-
-        <NavLinks
-          title="Support"
-          path1="/faq"
-          Link1="FAQ"
-          path2="/contact"
-          Link2="Contact Us"
-          path3="/report"
-          Link3="Report a Problem"
-        />
-
-        {/* Subscription Section */}
         <div className="subscribtion-section">
           <h1 className="text-2xl font-bold text-primary">
             Subscribe to our newsletter
@@ -131,9 +95,11 @@ const Footer = () => {
             </form>
           )}
         </div>
+        
       </footer>
+
       <CapyRights />
-      <ToastContainer 
+      {/* <ToastContainer 
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
@@ -142,7 +108,7 @@ const Footer = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+      /> */}
     </>
   );
 };

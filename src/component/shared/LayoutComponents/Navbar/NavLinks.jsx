@@ -1,6 +1,5 @@
-import React from 'react'
 import NavItem from './NavItem'
-import navItems from '../../../../data/layout/navbarData'
+import navItems from '../../../../data/layout/Navbar/navbarData'
 
 const NavLinks = () => {
   return (

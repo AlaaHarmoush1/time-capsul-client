@@ -1,10 +1,10 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { FiSettings } from "react-icons/fi"
 import { Link } from "react-router-dom"
 
 const AuthButton = (props) => {
   const [menu, setMenu] = useState(false)
-  const isLoggedIn = true
+  const isLoggedIn = localStorage.getItem('isLoggedIn') == 'true'
 
   const handleMenu = () => {
     setMenu((prev) => !prev)
@@ -14,20 +14,20 @@ const AuthButton = (props) => {
     return (
     <div className="relative inline-block sm-hidden">
       {!isLoggedIn ? (
-        <button className="bg-primary text-white px-6 py-2 text-base font-bold rounded-lg hover:scale-105 transition">
+        <button className="bg-primary text-white p-xs text-base  font-bold rounded-lg transition">
           Login
         </button>
       ) : (
         <div>
           <button
             onClick={handleMenu}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg transition cursor-pointer"
+            className="flex items-center gap-2 rounded-lg transition cursor-pointer"
           >
             <FiSettings className="text-xl text-primary" />
           </button>
 
           {menu && (
-            <div className="absolute right-0 mt-sm w-40 bg-white border rounded-lg shadow-lg z-10 ">
+            <div className="absolute right-0 mt-sm w-40 bg-white border rounded-lg shadow-lg z-10 p-xs ">
               <Link
                 to="/profile"
                 className="nav-link w-full text-center bg-transparent text-primary"
@@ -50,14 +50,14 @@ const AuthButton = (props) => {
     return (
     <div className="">
       {!isLoggedIn ? (
-        <button className="bg-primary text-white px-6 py-2 text-base font-bold rounded-lg hover:scale-105 transition">
+        <button className="bg-primary text-white p-xs text-base font-bold rounded-lg hover:scale-105 transition">
           Login
         </button>
       ) : (
         <div>
 
           
-        <div className="text-xl">
+        <div className="">
             <Link
             to="/profile"
             className="block p-xl text-primary transition"
